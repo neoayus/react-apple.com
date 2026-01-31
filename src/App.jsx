@@ -1,5 +1,5 @@
 // import stylesheet on top-most parent 
-import './Style.css' ; 
+import './Index.css' ; 
 
 function App() {
   return (
