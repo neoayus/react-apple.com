@@ -1,0 +1,19 @@
+.button{
+  height: 35px;
+  border: 0; 
+  color: #f5f5f7 ;    padding:6px 12px;
+  border-radius: 99px;
+  font-size: 12px ;
+  display: inline-block; 
+  white-space: nowrap;
+  justify-content: center;
+}
+.button.primary{
+  background-color:#0071e3;
+  align-items: center;
+}
+.button.secondary{
+  background-color: transparent;
+  color:#0071e3;
+  border: solid 0.8px #0071e3;
+}
