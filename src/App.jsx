@@ -1,10 +1,11 @@
 // import stylesheet on top-most parent 
 import './Index.css' ; 
+import NavBar from './AppleClone/NavBar';
 
 function App() {
   return (
     <>
-      <h2> www.apple.com </h2>
+      <NavBar/>
     </>
   )
 }
