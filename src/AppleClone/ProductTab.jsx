@@ -1,4 +1,4 @@
-import { Card, CardBlack, CardReverse} from './Cards'
+import Card from './Card'
 
 export default function ProductTab(){
   return(
@@ -18,7 +18,8 @@ export default function ProductTab(){
         impInfo="Built for Apple Intelligence"
       />
 
-      <CardBlack
+      <Card
+        theme='dark' 
         image="../../public/ipad-pro.jpg"
         title="iPad Pro"
         desc="Unbelievably thin. Incredibly Powerful"
@@ -57,7 +58,8 @@ export default function ProductTab(){
         secondaryButtonText="Buy"
       />
       
-      <CardReverse
+      <Card
+        layout='inverted'
         image="../../public/air-pods2.jpg"
         title="AirPods2"
         desc="Now with a Heaing Air feature."
