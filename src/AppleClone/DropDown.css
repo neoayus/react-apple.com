@@ -1,0 +1,28 @@
+/* MainList() */
+.list{
+    list-style-type: none;
+    font-size: 14px;
+    color: #1e1e1e;
+}
+
+.list > li {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 8px; 
+    align-items: center;
+}
+
+.list:last-child{
+    border-bottom: .6px solid #1e1e1e;
+}
+/* SubList() */
+.sublist{
+    font-size: 14px;
+    padding: 0 16px 8px; 
+}
+.sublist> li{
+    padding: 6px 0; 
+    font-weight: 290;
+}
+
