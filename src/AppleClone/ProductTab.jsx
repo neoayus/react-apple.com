@@ -10,7 +10,7 @@ export default function ProductTab(){
     }}>
 
       <Card
-        image="../../public/post-one.jpg"
+        image="/post-one.jpg"
         title="iPhone"
         desc="Meet the iPhone 16 family."
         primaryButtonText="learn more"
@@ -20,7 +20,7 @@ export default function ProductTab(){
 
       <Card
         theme='dark' 
-        image="../../public/ipad-pro.jpg"
+        image="/ipad-pro.jpg"
         title="iPad Pro"
         desc="Unbelievably thin. Incredibly Powerful"
         primaryButtonText="learn more"
@@ -31,7 +31,7 @@ export default function ProductTab(){
       
 
       <Card
-        image="../../public/macbook-air.jpg"
+        image="/macbook-air.jpg"
         title="MacBook Air"
         desc={
           <>
@@ -43,7 +43,7 @@ export default function ProductTab(){
       />
 
       <Card
-        image="../../public/ipad-air.jpeg"
+        image="/ipad-air.jpeg"
         title="iPad Air"
         desc="Now supercharged with M3 Chip."
         primaryButtonText="learn more"
@@ -51,7 +51,7 @@ export default function ProductTab(){
       />
 
       <Card
-        image="../../public/watch.jpeg"
+        image="/watch.jpeg"
         title="WATCH"
         desc="Thinstant Classic"
         primaryButtonText="learn more"
@@ -60,7 +60,7 @@ export default function ProductTab(){
       
       <Card
         layout='inverted'
-        image="../../public/air-pods2.jpg"
+        image="/air-pods2.jpg"
         title="AirPods2"
         desc="Now with a Heaing Air feature."
         primaryButtonText="learn more"
@@ -69,7 +69,7 @@ export default function ProductTab(){
       />
 
       <Card
-        image="../../public/trade-in.jpg"
+        image="/trade-in.jpg"
         title="Trade In"
         desc={
           <>
@@ -81,7 +81,7 @@ export default function ProductTab(){
       />
 
       <Card
-        image="../../public/card.jpeg"
+        image="/card.jpeg"
         title="Card"
         desc={
           <>
