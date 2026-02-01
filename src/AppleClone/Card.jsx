@@ -34,7 +34,6 @@ export default function Card({
         <p className="text-title"> {title} </p>
         <p className="text-desc"> {desc} </p>
       </div>
-      ``
       <div className="card-buttons">
         <PrimaryButton> {primaryButtonText} </PrimaryButton>
         <SecondaryButton> {secondaryButtonText} </SecondaryButton>
