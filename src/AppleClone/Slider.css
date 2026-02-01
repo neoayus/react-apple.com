@@ -1,0 +1,66 @@
+/* Slider() */
+.slider{
+    height: 526px; 
+    position: relative;
+    top: 0; 
+}
+
+/* SliderTrack() */
+.sliderTrack{
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    overflow-x: visible;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
+    flex: 0 0 auto ; 
+}
+
+/* SliderNav() */
+.slider-nav{
+    width: 100vw; 
+    height: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
+}
+.slider-button{
+    width: 32px; 
+    height: 100%; 
+    background-color: rgba(128, 128, 128, 0.508);
+    display: flex;
+}
+.icon{
+    width: fit-content;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+/* Pagination */
+.pagination{
+    height: 40px; 
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    bottom: 100px;
+    position: relative;
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
+}
+
+.dot{
+    width: 8px; 
+    height: 8px; 
+    border-radius: 99px;
+    background-color: #6c6c6d;
+}

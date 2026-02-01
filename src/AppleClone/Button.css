@@ -17,3 +17,8 @@
   color:#0071e3;
   border: solid 0.8px #0071e3;
 }
+.button.ordinary{
+    background-color: white;
+    color: black; 
+    border: 0; 
+}

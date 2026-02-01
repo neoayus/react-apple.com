@@ -11,3 +11,9 @@ export function SecondaryButton({children}){
     <button className='button secondary'>{children}</button>
   )
 }
+
+export function OrdinaryButton({children}){
+  return(
+    <button className='button ordinary'>{children}</button>
+  )
+}
