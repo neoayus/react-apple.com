@@ -12,7 +12,7 @@ export default function Slider(){
         <SliderTrack index={index}/> 
         <SliderNav index={index} setIndex={setIndex}/>
       </div>
-      <Pagination />
+      <Pagination index={index} setIndex={setIndex}/>
     </>
   )  
 }
@@ -102,16 +102,30 @@ function SliderNav({index, setIndex}){
   )
 }
 
-function Pagination(){
+function Pagination({index, setIndex}){
   return(
     <div className="pagination">
-      <PDot /> <PDot /> <PDot /> <PDot /> <PDot /> <PDot /> <PDot /> <PDot /> <PDot /> <PDot />
+      <PDot index={index} pIndex={0} setIndex={setIndex}/> 
+      <PDot index={index} pIndex={1} setIndex={setIndex}/> 
+      <PDot index={index} pIndex={2} setIndex={setIndex}/> 
+      <PDot index={index} pIndex={3} setIndex={setIndex}/> 
+      <PDot index={index} pIndex={4} setIndex={setIndex}/> 
+      <PDot index={index} pIndex={5} setIndex={setIndex}/> 
+      <PDot index={index} pIndex={6} setIndex={setIndex}/> 
+      <PDot index={index} pIndex={7} setIndex={setIndex}/> 
+      <PDot index={index} pIndex={8} setIndex={setIndex}/> 
+      <PDot index={index} pIndex={9} setIndex={setIndex}/> 
     </div>
   ) 
 }
 
-function PDot(){
+function PDot({index, pIndex, setIndex}){
+
+  function handleClick(){
+    setIndex(()=>pIndex);
+  } 
+
   return(
-    <div className="dot"></div>
+    <div className="dot" onClick={handleClick} style={{backgroundColor : `${index == pIndex ? "#1e1e1e" : "#6c6c6d"}`}}></div>
   )    
 }
