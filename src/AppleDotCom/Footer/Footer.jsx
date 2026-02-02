@@ -1,4 +1,5 @@
 import './Footer.css';
+import DropDown from './DropDown.jsx'
 
 export default function Footer(){
   return(
@@ -30,6 +31,9 @@ export default function Footer(){
         Features are subject to change. Some features, applications, and services may not be available in all regions or all languages.
         <br/><br/>
       </p>
+
+      {/*  */}
+      <DropDown />
 
       <ul>
         <li>More ways to shop : <a href="#" className="blue-url">Find an Apple Store </a>or <a href="#" className="blue-url">other retailer </a>near you. Or call <a href="#" className="blue-url">1-800-MY-APPLE </a>(1-800-692-7753). </li><br/>

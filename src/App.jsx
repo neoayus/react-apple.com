@@ -1,16 +1,19 @@
-// import stylesheet on top-most parent
+// import UNI.STYLESHEET.
 import "./Index.css";
-// import NavBar from './AppleClone/NavBar';
-// import Card from "./AppleClone/Card";
-// import ProductTab from "./AppleClone/ProductTab";
-// import Slider from './AppleClone/Slider'
-// import Footer from './AppleClone/Footer'
-import DropDownList from './AppleClone/DropDown.jsx';
+
+// apple.dot.com components 
+import NavBar from "./AppleDotCom/NavBar/NavBar.jsx";
+import ProductTab from './AppleDotCom/ProductTab.jsx';
+import Slider from './AppleDotCom/Slider/Slider.jsx';
+import Footer from './AppleDotCom/Footer/Footer.jsx'
 
 function App() {
   return (
     <>
-      <DropDownList />
+      <NavBar />
+      <ProductTab />
+      <Slider />
+      <Footer />
     </>
   );
 }

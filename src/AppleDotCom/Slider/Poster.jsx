@@ -1,4 +1,4 @@
-import {OrdinaryButton} from './Button';
+import {OrdinaryButton} from '../Buttons/Buttons';
 
 var posterStyle = {
   backgroundSize : "cover",

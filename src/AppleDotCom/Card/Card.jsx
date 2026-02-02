@@ -1,4 +1,4 @@
-import { PrimaryButton, SecondaryButton } from "./Button.jsx";
+import { PrimaryButton, SecondaryButton } from "../Buttons/Buttons.jsx";
 import "./Card.css";
 
 export default function Card({
