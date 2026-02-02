@@ -1,21 +1,25 @@
+import { useState } from "react";
 import Poster from "./Poster";
 import "./Slider.css";
 
 export default function Slider(){
+
+  const [xAxis, setXAxis ] = useState(0);
+
   return(
     <>
       <div className="slider">
-        <SliderTrack/> 
-        <SliderNav />
+        <SliderTrack xAxis={xAxis}/> 
+        <SliderNav xAxis={xAxis} setXAxis={setXAxis}/>
       </div>
       <Pagination />
     </>
   )  
 }
 
-function SliderTrack() {
+function SliderTrack({xAxis}) {
   return(
-    <div className="sliderTrack">
+    <div className="sliderTrack" style={{translate: `${xAxis}px`}}>
       <Poster
         image="/poster01.png"
         genre="Comedy"
@@ -70,15 +74,27 @@ function SliderTrack() {
   );
 }
 
-function SliderNav(){
+function SliderNav({xAxis, setXAxis}){
+  
+  const vw = window.innerWidth;
+
+  function handleLeftClick(){
+    if(xAxis === 0)  return ; 
+    setXAxis((xAxis)=> xAxis + vw) 
+  }
+  function handleRightClick(){
+    if(xAxis < -(vw * 9)) return ; 
+    setXAxis((xAxis)=> xAxis-vw) 
+  }
+
   return(
     <div className="slider-nav">
-      <div className="slider-button left icon">
+      <div className="slider-button left icon" onClick={handleLeftClick}>
         <svg width="14" height="25" viewBox="0 0 14 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2.49587 12.605L13.6924 1.74033C14.0966 1.34812 14.1033 0.705584 13.7074 0.30508C13.3106 -0.0962698 12.662 -0.102021 12.2586 0.290195L0.307656 11.8874C0.110124 12.0799 -0.000848749 12.3432 4.88865e-06 12.6174C0.00171216 12.8915 0.115075 13.1542 0.315168 13.3441L12.2661 24.7167C12.4645 24.9058 12.7204 25 12.9755 25C13.2447 25 13.5131 24.8951 13.714 24.6878C14.1059 24.2839 14.0934 23.6414 13.6848 23.2534L2.49587 12.605Z" fill="#6C6C6D"/>
         </svg>
       </div>
-      <div className="slider-button right icon">
+      <div className="slider-button right icon" onClick={handleRightClick}>
         <svg width="14" height="25" viewBox="0 0 14 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M11.5041 12.6049L0.307642 1.74032C-0.0966407 1.34811 -0.103299 0.705579 0.292618 0.305078C0.689389 -0.0962691 1.33798 -0.10202 1.74141 0.290193L13.6923 11.8873C13.8899 12.0798 14.0008 12.3431 14 12.6173C13.9983 12.8914 13.8849 13.1541 13.6848 13.344L1.7339 24.7167C1.53552 24.9058 1.27959 25 1.02453 25C0.75529 25 0.486906 24.8951 0.28596 24.6878C-0.10586 24.2839 -0.0933969 23.6414 0.315154 23.2534L11.5041 12.6049Z" fill="#6C6C6D"/>
         </svg>
