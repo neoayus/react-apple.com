@@ -1,6 +1,8 @@
 # Apple.com clone (React)
 
-This is a **work-in-progress** React rewrite of an Apple.com–style landing page.
+***live link: https://neoclone.netlify.app/*** 
+i still got some minor tweaks, refactors and stylin issues to deal with, tho that for later, i'm through this...
+
 
 The goal of this project is to take an old **HTML/CSS/JS design** (originally designed in Figma) and rebuild it using **modern React practices**, focusing on:
 - component-based architecture
