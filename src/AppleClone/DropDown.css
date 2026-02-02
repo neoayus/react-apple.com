@@ -13,8 +13,8 @@
     align-items: center;
 }
 
-.list:last-child{
-    border-bottom: .6px solid #1e1e1e;
+.list li{
+    /* border-bottom: .6px solid #1e1e1e; */
 }
 /* SubList() */
 .sublist{

@@ -1,30 +1,64 @@
-import { Children, useState } from 'react';
+import { useState } from 'react';
 import './DropDown.css';
 
-export default function DropDown(){
+var dropdownList = [
+  {
+    listItem: "Shop and Learn",
+    sublist : ["Store", "Mac", "iPad", "Watch", "Vision", "AirPods", "Tv & Home", "AirTag", "Accessories", "Gift Cards"],
+  },
+  {
+    listItem : "Account",
+    sublist : ["Manage Your Apple Account", "Apple Store Account", "iCloud.com"], 
+  },
+  {
+    listItem : "Entertainment",
+    sublist : ["Apple One", "Apple TV+", "Apple Music", "Apple Arcade", "Apple Fitness+", "Apple News+", "Apple Podcasts", "Apple Books", "Apple Store"], 
+  },
+  {
+    listItem : "Apple Store",
+    sublist : ["Find a Store", "Genius Bar", "Today at Apple", "Group Reservations", "Apple Camp", "Apple Store App", "Apple Trade in", "Financing", "Carrer Deasl at Apple", "Shopping Help"], 
+  },
+  {
+    listItem : "For Business",
+    sublist : ["Apple and Business", "Shop for Business"], 
+  },
+  {
+    listItem : "For Education",
+    sublist : ["Apple and Education", "Shop for K-12", "Shop for College"], 
+  },
+  {
+    listItem : "For HealthCare",
+    sublist : ["Apple and HealthCare"], 
+  },
+  {
+    listItem : "For Government",
+    sublist : ["Apple and Government", "Shop for Veterans and Military", "Shop for State and Local Employees", "Shop for Genera Employees"], 
+  },
+  {
+    listItem : "Apple Value", 
+    sublist : ["Accessibility", "Education", "Environment", "Inclusion and Diversity", "Privacy", "Racial Eqity and Justice", "Suupy Chain Innovation"], 
+  },
+  {
+    listItem : "About Apple",
+    sublist : ["Newsroom", "Apple Leadership", "Carrer Oppurtunity", "Investors", "Ethics & Compliance", "Events", "Contact Apple"], 
+  },
+];
 
+export default function DropDown(){
   return(
     <ul className='list'>
-      <UlLi> Shop and Learn </UlLi>
-      {/* <UlLi> Account </UlLi>
-      <UlLi> Entertainment </UlLi>
-      <UlLi> Apple Store </UlLi>
-      <UlLi> For Business </UlLi>
-      <UlLi> For Education </UlLi>
-      <UlLi> For HealthCare </UlLi>
-      <UlLi> For Government </UlLi>
-      <UlLi> Apple Values </UlLi>
-      <UlLi> About Apple </UlLi> */}
-    </ul>
+      {
+        dropdownList.map((item)=> <ListItem sublist={item.sublist}> {item.listItem} </ListItem>)
+      } 
+    </ul> 
   )
 }
 
-function UlLi({children}){
+function ListItem({children, sublist}){
 
   const [open, setOpen] = useState(false); 
 
   function handleClick(){
-    console.log()
     setOpen((open)=> !open);
   }
 
@@ -38,11 +72,12 @@ function UlLi({children}){
           }
         </div>
       </li>
-      {open && <SubList items={["Store", "Mac", "iPad", "Watch", "Vision", "AirPods", "Tv & Home", "AirTag", "Accessories", "Gift Cards"]}/> }
+      {open && <SubList items={sublist}/> }
     </>
   )
 }
 
+// 
 
 function SubList({items}){
   return(
