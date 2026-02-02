@@ -126,6 +126,6 @@ function PDot({index, pIndex, setIndex}){
   } 
 
   return(
-    <div className="dot" onClick={handleClick} style={{backgroundColor : `${index == pIndex ? "#1e1e1e" : "#6c6c6d"}`}}></div>
+    <div className="dot" onClick={handleClick} style={{backgroundColor : `${index === pIndex ? "#1e1e1e" : "#6c6c6d"}`}}></div>
   )    
 }
