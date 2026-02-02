@@ -4,22 +4,23 @@ import "./Slider.css";
 
 export default function Slider(){
 
-  const [xAxis, setXAxis ] = useState(0);
+  const [index, setIndex] = useState(0);
 
   return(
     <>
       <div className="slider">
-        <SliderTrack xAxis={xAxis}/> 
-        <SliderNav xAxis={xAxis} setXAxis={setXAxis}/>
+        <SliderTrack index={index}/> 
+        <SliderNav index={index} setIndex={setIndex}/>
       </div>
       <Pagination />
     </>
   )  
 }
 
-function SliderTrack({xAxis}) {
+function SliderTrack({index}) {
+  const vw = window.innerWidth;
   return(
-    <div className="sliderTrack" style={{translate: `${xAxis}px`}}>
+    <div className="sliderTrack" style={{translate: `${-(index * vw)}px`}}>
       <Poster
         image="/poster01.png"
         genre="Comedy"
@@ -74,17 +75,15 @@ function SliderTrack({xAxis}) {
   );
 }
 
-function SliderNav({xAxis, setXAxis}){
+function SliderNav({index, setIndex}){
   
-  const vw = window.innerWidth;
-
   function handleLeftClick(){
-    if(xAxis === 0)  return ; 
-    setXAxis((xAxis)=> xAxis + vw) 
+    if(index === 0) return ; 
+    setIndex((index)=> index-1)
   }
   function handleRightClick(){
-    if(xAxis < -(vw * 9)) return ; 
-    setXAxis((xAxis)=> xAxis-vw) 
+    if(index >= 9) return ; 
+    setIndex((index)=> index+1)
   }
 
   return(
