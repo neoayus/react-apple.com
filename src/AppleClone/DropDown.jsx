@@ -36,7 +36,7 @@ var dropdownList = [
   },
   {
     listItem : "Apple Value", 
-    sublist : ["Accessibility", "Education", "Environment", "Inclusion and Diversity", "Privacy", "Racial Eqity and Justice", "Suupy Chain Innovation"], 
+    sublist : ["Accessibility", "Education", "Environment", "Inclusion and Diversity", "Privacy", "Racial Equity and Justice", "Supply Chain Innovation"], 
   },
   {
     listItem : "About Apple",
