@@ -5,7 +5,7 @@ export default function NavBar() {
 
   const [menu, setMenu] = useState(false);
   const [shop, setShop] = useState(false);
-  const [search, setSearch] = useState(false);
+  const [search, setSearch] = useState(true);
   const close = menu || shop || search ; 
   
   function handleHam(){
@@ -74,14 +74,45 @@ function SearchPage({search}){
   if (!search) return null ; 
   return(
     <div>
-      <input type="text" placeholder="Search"/>
+      <div className="searchBar">
+        <div className="icon search">
+          <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M15.7894 15.4737L11.6139 11.3916C12.6107 10.0918 13.0775 8.46217 12.92 6.83163C12.7626 5.20109 11.9925 3.69095 10.7653 2.60587C9.53811 1.52078 7.94504 0.941501 6.30749 0.984893C4.66994 1.02828 3.10978 1.69112 1.94176 2.83967C0.773735 3.98823 0.0847753 5.53702 0.0138676 7.17362C-0.0570401 8.81021 0.495381 10.4128 1.55969 11.6581C2.624 12.9033 4.12098 13.6986 5.74864 13.8835C7.3763 14.0683 9.01351 13.629 10.33 12.6541L14.5305 16.7607C14.615 16.8434 14.7149 16.9086 14.8246 16.9526C14.9343 16.9966 15.0516 17.0186 15.1698 17.0173C15.288 17.016 15.4048 16.9914 15.5135 16.945C15.6222 16.8986 15.7207 16.8312 15.8034 16.7466C15.886 16.6621 15.9512 16.5622 15.9952 16.4525C16.0393 16.3428 16.0613 16.2255 16.0599 16.1073C16.0586 15.9891 16.0341 15.8723 15.9876 15.7636C15.9412 15.6549 15.8739 15.5564 15.7894 15.4737ZM1.25997 7.47205C1.26139 6.43489 1.57025 5.42144 2.14749 4.55977C2.72474 3.6981 3.54447 3.02689 4.50309 2.63098C5.4617 2.23506 6.51617 2.13221 7.53322 2.33542C8.55027 2.53863 9.48426 3.03878 10.2171 3.77266C10.95 4.50655 11.4489 5.44122 11.6507 6.45855C11.8525 7.47588 11.7482 8.5302 11.351 9.48827C10.9538 10.4463 10.2814 11.2652 9.41896 11.8412C8.5565 12.4173 7.54262 12.7247 6.50547 12.7247C5.11379 12.7223 3.77994 12.1678 2.79655 11.1831C1.81316 10.1983 1.26055 8.86372 1.25997 7.47205Z" fill="black" /> </svg>
+        </div>
+        <input type="text" placeholder="Search"/>
+      </div>
       
-      <ul>
-        <li> Find a Store </li>
-        <li> Apple Vision Pro</li>
-        <li> AirPods </li>
-        <li> Apple Intelligence </li>
-        <li> Apple Trade In</li> 
+      <ul className="quick-links">
+        <p>Quick Links</p>
+        <li> 
+          <div className="icon arrow right">
+            <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 13 25" width="13"><path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"/></svg> 
+          </div>
+          Find a Store
+        </li>
+        <li> 
+          <div className="icon arrow right">
+            <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 13 25" width="13"><path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"/></svg> 
+          </div>
+          Apple Vision Pro
+        </li>
+        <li> 
+          <div className="icon arrow right">
+            <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 13 25" width="13"><path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"/></svg> 
+          </div>
+          AirPods 
+        </li>
+        <li> 
+          <div className="icon arrow right">
+            <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 13 25" width="13"><path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"/></svg> 
+          </div>
+          Apple Intelligence 
+        </li>
+        <li> 
+          <div className="icon arrow right">
+            <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 13 25" width="13"><path d="m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z"/></svg> 
+          </div>
+          Apple Trade In
+        </li> 
       </ul>
     </div>
   )

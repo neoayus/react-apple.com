@@ -12,17 +12,100 @@
 }
 
 .icon{
-    width: fit-content;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
+  width: fit-content;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
 }
 
 .nav-list{
-    height: 90vh; 
-    list-style-type: none;
-    font-size: 32px; 
-    font-weight: 450;
-    padding: 30px 0 0 40px; 
+  height: 90vh; 
+  list-style-type: none;
+  font-size: 32px; 
+  font-weight: 450;
+  padding: 30px 0 0 40px; 
+}
+
+/* Search Icon Page.01 */
+.searchBar{
+  height: 40px; 
+  width: 80vw; 
+  display: flex;
+  margin: 0 auto; 
+  /* background-color: pink; */
+  margin-top: 25px; 
+  color: #6c6c6d;
+}
+
+.searchBar > .icon{
+  height: 40px; 
+  width: 40px;
+}
+
+.searchBar > .icon > svg{
+  width: 100%;
+  height: 100%; 
+  color: #6c6c6d;
+}
+
+input[type = text]{
+  border: none; 
+  background: none;
+  width: 100%; 
+  font-size: 28px;  
+  font-weight: 500;
+  padding-left: 5px;
+
+  color: #111 ; 
+  caret-color:#111 ; 
+  align-items: center;
+  justify-content: center;
+}
+
+input[type = text]:focus{
+  outline: none;
+  border: none;
+  background: none;
+
+  /* caret-color: black; */
+}
+
+/* Quick Links */
+.quick-links{
+  margin: 50px 0px 0px 40px ; 
+  font-size: 17px; 
+}
+
+.quick-links > p {
+  color: #6c6c6d;
+}
+
+.quick-links{
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-links > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 35px; 
+  font-weight: 450;
+}
+.quick-links p{
+  margin-bottom: 10px;
+}
+
+.quick-links li div {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.quick-links svg{
+  width: 100%;
+  height: 100%; 
+  color: #6c6c6d;
 }
