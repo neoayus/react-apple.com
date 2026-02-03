@@ -85,7 +85,7 @@ function ListItem({children, sublist}){
 
 function SubList({items}){
   return(
-    <ul className='sublist' style={{borderBottom : open? ".6px solid #1e1e1e": "none"}}> 
+    <ul className='sublist' style={{borderBottom : open? ".8px solid #6c6c6d": "none"}}> 
       {
         items.map((item)=> <li key={uuid()}>{item}</li>)
       }
