@@ -129,14 +129,19 @@ h2{
   font-weight: 550;
 }
 
-p{
+.quick-links {
+  color: black ;
+}
+
+.quick-links p{
   width: 80vw; 
   margin: 4px auto; 
   font-size: 17px; 
-  color: #6c6c6d;
+  /* color: #6c6c6d; */
+  margin-left: 0; 
 }
 
-p a{
+.quick-links p a{
   color: rgb(7, 82, 221);
   text-decoration: underline;
 }
