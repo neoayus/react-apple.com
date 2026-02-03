@@ -65,7 +65,7 @@ function ListItem({children, sublist}){
 
   return(
     <>
-      <li onClick={handleClick}>
+      <li onClick={handleClick} style={{borderBottom : open? "none": ""}}>
         <p>{children}</p>
         <div className="icon"> 
           { 
@@ -85,9 +85,9 @@ function ListItem({children, sublist}){
 
 function SubList({items}){
   return(
-    <ul className='sublist'> 
+    <ul className='sublist' style={{borderBottom : open? ".6px solid #1e1e1e": "none"}}> 
       {
-        items.map((item)=> <li>{item}</li>)
+        items.map((item)=> <li key={uuid()}>{item}</li>)
       }
     </ul> 
   )
