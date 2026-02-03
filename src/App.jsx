@@ -11,9 +11,9 @@ function App() {
   return (
     <>
       <NavBar />
-      <ProductTab />
-      <Slider />
-      <Footer />
+      {/* <ProductTab /> */}
+      {/* <Slider /> */}
+      {/* <Footer /> */}
     </>
   );
 }
