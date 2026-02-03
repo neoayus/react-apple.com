@@ -28,6 +28,9 @@
 }
 
 /* Search Icon Page.01 */
+.search-menu{
+  height: 90vh; 
+}
 .searchBar{
   height: 40px; 
   width: 80vw; 
@@ -117,6 +120,7 @@ input[type = text]:focus{
 
 .shop-menu{
   margin-top: 30px;
+  height: 90vh; 
 }
 h2{ 
   width: 80vw; 
