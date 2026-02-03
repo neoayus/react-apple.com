@@ -61,17 +61,52 @@ export default function NavBar() {
             </div>
           }
         </div> 
-
       </div>
+      {search && <SearchPage search={search} />}
       {menu && <HamMenu menu={menu}/> }
+      {shop && <ShopPage shop={shop} />}
     </>
   );
 }
 
+
+function SearchPage({search}){
+  if (!search) return null ; 
+  return(
+    <div>
+      <input type="text" placeholder="Search"/>
+      
+      <ul>
+        <li> Find a Store </li>
+        <li> Apple Vision Pro</li>
+        <li> AirPods </li>
+        <li> Apple Intelligence </li>
+        <li> Apple Trade In</li> 
+      </ul>
+    </div>
+  )
+}
+
+function ShopPage({shop}){
+  if (!shop) return null ; 
+  return(
+    <div>
+      <h2>Your Bag is empty.</h2>
+      <p>Sign-in to see if you have any saved items</p>
+      
+      <p> My Profile</p>
+      <ul>
+        <li> Orders </li>
+        <li> Your Saves </li>
+        <li> Account </li>
+        <li> Sign in </li>
+      </ul> 
+    </div>
+  )
+}
+
 function HamMenu({menu}){
-
   if (!menu) return null ; 
-
   return( 
     <ul className="nav-list ">
       <li>Store</li>
