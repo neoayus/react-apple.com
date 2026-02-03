@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./NavBar.css";
 
 export default function NavBar() {
@@ -25,6 +25,21 @@ export default function NavBar() {
     setShop(false);
     setSearch(false);
   }
+
+  useEffect(() => {
+    if (close) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
+  }, [close]);
 
 
   return (
