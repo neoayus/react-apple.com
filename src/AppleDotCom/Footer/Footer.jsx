@@ -22,7 +22,7 @@ export default function Footer(){
         <br/><br/>
         If you reside in the U.S. territories, please call Goldman Sachs at 877-255-5923 with questions about Apple Card.
         <br/><br/>
-        Learn more about how Apple Card applications are evaluated at <a href="#" class="link">support.apple.com/kb/HT209218 </a>.
+        Learn more about how Apple Card applications are evaluated at <a href="#" className="link">support.apple.com/kb/HT209218 </a>.
         <br/><br/>
         Apple Intelligence is available in beta on all iPhone 16 models, iPhone 15 Pro, iPhone 15 Pro Max, iPad mini (A17 Pro), and iPad and Mac models with M1 and later, with Siri and device language set to the same supported language, as part of an iOS 18, iPadOS 18, and macOS Sequoia software update. Supported languages include English, French, German, Italian, Portuguese (Brazil), Spanish, Japanese, Korean, and Chinese (Simplified). More languages are coming over the course of the year, including Vietnamese. Some features may not be available in all regions or languages.
         <br/><br/>

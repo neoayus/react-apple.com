@@ -1,3 +1,4 @@
+import { v4 as uuid } from "uuid";
 import { useState } from 'react';
 import './DropDown.css';
 
@@ -48,7 +49,7 @@ export default function DropDown(){
   return(
     <ul className='list'>
       {
-        dropdownList.map((item)=> <ListItem sublist={item.sublist}> {item.listItem} </ListItem>)
+        dropdownList.map((item)=> <ListItem key={uuid()}sublist={item.sublist}> {item.listItem} </ListItem>)
       } 
     </ul> 
   )
@@ -69,9 +70,9 @@ function ListItem({children, sublist}){
         <div className="icon"> 
           { 
             open ? 
-            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1 7L7 1L13 7" stroke="#6C6C6D" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1 7L7 1L13 7" stroke="#6C6C6D" strokeLinecap="round" strokeLinejoin="round"/> </svg>
             :
-            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13 1L7 7L1 1" stroke="#6C6C6D" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13 1L7 7L1 1" stroke="#6C6C6D" strokeLinecap="round" strokeLinejoin="round"/> </svg>
           }
         </div>
       </li>
